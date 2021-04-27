@@ -4,20 +4,20 @@ import { connect } from "react-redux";
 import { contactsOperations, contactsSelectors } from "../../redux";
 
 const ContactList = ({ contacts, deleteContact }) => (
-  <ul>
+  <ul className={styles.list}>
     {console.log(contacts)}
     {contacts.map(({ name, number, id }) => (
       <li key={id} className={styles.item}>
         <p>
           {name}: {number}
+          <button
+            type="button"
+            className={styles.button}
+            onClick={() => deleteContact(id)}
+          >
+            Delete
+          </button>
         </p>
-        <button
-          type="button"
-          className={styles.button}
-          onClick={() => deleteContact(id)}
-        >
-          Delete
-        </button>
       </li>
     ))}
   </ul>

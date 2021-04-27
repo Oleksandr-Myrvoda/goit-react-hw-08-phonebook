@@ -1,46 +1,37 @@
 import React, { Component, Suspense, lazy } from "react";
 import { Switch } from "react-router";
-// import ContactForm from "./Components/ContactsForm";
-// import Filter from "./Components/Filter";
-// import ContactList from "./Components/ContactList";
-
-import AppBar from "./Components/AppBar";
-// import HomePage from "./redux/pages/HomePage";
-// import RegisterPage from "./redux/pages/RegisterPage";
-// import LoginPage from "./redux/pages/LoginPage";
-// import ContactsPage from "./redux/pages/ContactsPage";
-import Container from "./Components/Container";
-
 import { connect } from "react-redux";
 import { authOperations } from "./redux/auth";
+import AppBar from "./components/AppBar";
+import Container from "./components/Container";
 
-import PrivateRoute from "./Components/Routes/PrivatRoute";
-import PublicRoute from "./Components/Routes/PublicRoute";
+import PrivateRoute from "./components/routes/PrivatRoute";
+import PublicRoute from "./components/routes/PublicRoute";
 
 import "./App.css";
 
 const HomePage = lazy(() =>
-  import("./redux/pages/HomePage" /* webpackChunkName: "home-page" */)
+  import("./pages/HomePage" /* webpackChunkName: "home-page" */)
 );
 const ContactsPage = lazy(() =>
-  import("./redux/pages/ContactsPage" /* webpackChunkName: "contacts-page" */)
+  import("./pages/ContactsPage" /* webpackChunkName: "contacts-page" */)
 );
 const RegisterPage = lazy(() =>
-  import("./redux/pages/RegisterPage" /* webpackChunkName: "register-page" */)
+  import("./pages/RegisterPage" /* webpackChunkName: "register-page" */)
 );
 const LoginPage = lazy(() =>
-  import("./redux/pages/LoginPage" /* webpackChunkName: "login-page" */)
+  import("./pages/LoginPage" /* webpackChunkName: "login-page" */)
 );
 
 class App extends Component {
-  // componentDidMount() {
-  //   this.props.onGetCurrentUser();
-  // }
+  componentDidMount() {
+    this.props.onGetCurrentUser();
+  }
 
   render() {
     return (
       <div className="mainBox">
-        <Container>
+        <Container className="section">
           <AppBar />
           <Suspense fallback={<p>Loading...</p>}>
             <Switch>
@@ -71,20 +62,7 @@ class App extends Component {
 }
 
 const mapDispatchToProps = {
-  // onGetCurrentUser: authOperations.getCurrentUser,
+  onGetCurrentUser: authOperations.getCurrentUser,
 };
 
 export default connect(null, mapDispatchToProps)(App);
-
-{
-  /* <section title="Phonebook" className="section">
-  <h1>Phonebook</h1>
-  <ContactForm />
-</section>
-
-<section title="Contacts" className="section">
-  <h2>Contacts</h2>
-  <Filter />
-  <ContactList />
-</section> */
-}

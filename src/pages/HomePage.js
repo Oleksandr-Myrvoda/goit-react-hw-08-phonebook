@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "../components/ContactsForm/ContactForm.module.css";
 
 const HomeView = () => (
-  <div>
+  <div className={styles.pageBox}>
     <h1>Welcome on Home page</h1>
   </div>
 );

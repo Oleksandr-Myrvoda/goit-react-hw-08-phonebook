@@ -12,7 +12,7 @@ import {
 } from "./contactsActions";
 
 //===== GET
-const fetchContact = () => async (dispatch) => {
+const fetchContacts = () => async (dispatch) => {
   dispatch(fetchContactRequest());
 
   try {
@@ -48,4 +48,4 @@ const deleteContact = (contactId) => async (dispatch) => {
   }
 };
 
-export default { fetchContact, addContact, deleteContact };
+export default { fetchContacts, addContact, deleteContact };

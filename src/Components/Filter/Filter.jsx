@@ -4,9 +4,14 @@ import { connect } from "react-redux";
 import { contactsSelectors, filterContact } from "../../redux";
 
 const Filter = ({ value, onChange }) => (
-  <label>
+  <label className={styles.label}>
     <p className={styles.title}>Filter</p>
-    <input type="text" value={value} onChange={onChange} />
+    <input
+      type="text"
+      value={value}
+      onChange={onChange}
+      className={styles.input}
+    />
   </label>
 );
 

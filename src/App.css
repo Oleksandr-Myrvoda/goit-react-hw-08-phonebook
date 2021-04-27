@@ -1,9 +1,9 @@
-.mainBox {
-  width: 1170px;
+/* .mainBox {
+  max-width: 1170px;
   height: 100vh;
   padding: 0 15px;
   margin-top: 50px;
-}
+} */
 
 .section {
   display: flex;

@@ -27,6 +27,7 @@ const token = {
 };
 
 const register = (credentials) => async (dispatch) => {
+  console.log(credentials);
   dispatch(registerRequest());
 
   try {
@@ -44,6 +45,7 @@ const logIn = (credentials) => async (dispatch) => {
   try {
     const response = await axios.post("users/login", credentials);
     token.set(response.data.token);
+    console.log(response.data.token);
     dispatch(loginSuccess(response.data));
   } catch (error) {
     dispatch(loginError(error.message));
@@ -65,9 +67,6 @@ const logOut = () => async (dispatch) => {
 const getCurrentUser = () => async (dispatch, getState) => {
   const persistedToken = getState().auth.token;
   console.log(persistedToken);
-  // const {
-  //   auth: { token: persistedToken },
-  // } = getState();
   if (!persistedToken) {
     return;
   }

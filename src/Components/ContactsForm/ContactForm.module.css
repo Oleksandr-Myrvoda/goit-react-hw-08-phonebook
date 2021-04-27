@@ -8,21 +8,73 @@
   margin-top: 10px;
 }
 
+.pageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .button {
   height: 30px;
   border: none;
   border-radius: 5px;
   outline: none;
   margin-top: 10px;
+  max-width: 200px;
 
   font-size: 15px;
   line-height: 1.2;
-  color: #000;
-  background-color: #d1cfcf;
+  color: #fff;
+  background-color: #1873e9;
   cursor: pointer;
 }
 
 .button:hover {
   background-color: #0921ad;
-  color: #fff;
+}
+
+.registerForm {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  padding: 20px;
+  width: 400px;
+  border: 1px solid #305177;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.loginForm {
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 3px;
+  align-items: center;
+  padding: 10px;
+  width: 400px;
+  border: 1px solid #305177;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+.input {
+  padding: 5px;
+  font-size: 20px;
+  margin-left: 10px;
+  border-radius: 3px;
+  border: 1px solid #305177;
+  outline: 0;
+  outline-offset: 0;
+  color: #305177;
+}
+.input:hover {
+  border: 1px solid #0921ad;
 }

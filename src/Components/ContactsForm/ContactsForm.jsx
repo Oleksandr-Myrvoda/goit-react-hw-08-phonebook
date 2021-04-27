@@ -10,7 +10,7 @@ class ContactForm extends Component {
   };
 
   componentDidMount() {
-    this.props.fetchContact();
+    this.props.fetchContacts();
   }
 
   handleChange = (event) => {
@@ -63,6 +63,7 @@ class ContactForm extends Component {
             required
             value={name}
             onChange={this.handleChange}
+            className={styles.input}
           />
         </label>
 
@@ -76,6 +77,7 @@ class ContactForm extends Component {
             required
             value={number}
             onChange={this.handleChange}
+            className={styles.input}
           />
         </label>
 
@@ -92,7 +94,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  fetchContact: contactsOperations.fetchContact,
+  fetchContacts: contactsOperations.fetchContacts,
   addContact: contactsOperations.addContact,
 };
 

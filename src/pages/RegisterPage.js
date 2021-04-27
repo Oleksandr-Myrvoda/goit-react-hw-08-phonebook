@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { authOperations } from "../auth";
+import { authOperations } from "../redux/auth";
+import styles from "../components/ContactsForm/ContactForm.module.css";
 
 class RegisterPage extends Component {
   state = {
@@ -20,39 +21,49 @@ class RegisterPage extends Component {
   };
 
   render() {
-    const { name, email, password } = this.setState;
+    const { name, email, password } = this.state;
     return (
-      <div>
+      <div className={styles.pageBox}>
         <h1>Register page</h1>
 
-        <form onSubmit={this.handleSubmit} autocomplete="off">
-          <label>
-            Name
+        <form
+          onSubmit={this.handleSubmit}
+          autocomplete="off"
+          className={styles.registerForm}
+        >
+          <label className={styles.label}>
+            Name:
             <input
-              type="name"
+              type="text"
               name="name"
               value={name}
               onChange={this.handleChange}
+              className={styles.input}
             />
           </label>
-          <label>
-            Email
+          <label className={styles.label}>
+            Email:
             <input
-              type="email"
+              type="text"
               name="email"
               value={email}
               onChange={this.handleChange}
+              className={styles.input}
             />
           </label>
-          <label>
-            Password
+          <label className={styles.label}>
+            Password:
             <input
               type="password"
               name="password"
               value={password}
               onChange={this.handleChange}
+              className={styles.input}
             />
           </label>
+          <button type="submit" className={styles.button}>
+            Register
+          </button>
         </form>
       </div>
     );
