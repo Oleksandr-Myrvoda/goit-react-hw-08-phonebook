@@ -4,7 +4,7 @@ import styles from "./AppBar.module.css";
 
 import { authSelectors } from "../../redux/auth";
 
-import Navigation from "../navigation";
+import Navigation from "../Navigation";
 import AuthNav from "../AuthNav";
 import UserMenu from "../UserMenu";
 

@@ -5,8 +5,8 @@ import { authOperations } from "./redux/auth";
 import AppBar from "./components/AppBar";
 import Container from "./components/Container";
 
-import PrivateRoute from "./components/routes/PrivatRoute";
-import PublicRoute from "./components/routes/PublicRoute";
+import PrivateRoute from "./components/Routes/PrivatRoute";
+import PublicRoute from "./components/Routes/PublicRoute";
 
 import "./App.css";
 
