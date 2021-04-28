@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../components/ContactsForm/ContactForm.module.css";
+import styles from "../Components/ContactsForm/ContactForm.module.css";
 
 const HomeView = () => (
   <div className={styles.pageBox}>

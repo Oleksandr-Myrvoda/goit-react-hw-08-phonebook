@@ -2,11 +2,11 @@ import React, { Component, Suspense, lazy } from "react";
 import { Switch } from "react-router";
 import { connect } from "react-redux";
 import { authOperations } from "./redux/auth";
-import AppBar from "./components/AppBar";
-import Container from "./components/Container";
+import AppBar from "./Components/AppBar";
+import Container from "./Components/Container";
 
-import PrivateRoute from "./components/Routes/PrivatRoute";
-import PublicRoute from "./components/Routes/PublicRoute";
+import PrivateRoute from "./Components/Routes/PrivatRoute";
+import PublicRoute from "./Components/Routes/PublicRoute";
 
 import "./App.css";
 

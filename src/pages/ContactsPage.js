@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { contactsOperations } from "../redux/contacts";
 
-import ContactsForm from "../components/ContactsForm";
-import Filter from "../components/Filter";
-import ContactList from "../components/ContactList";
+import ContactsForm from "../Components/ContactsForm";
+import Filter from "../Components/Filter";
+import ContactList from "../Components/ContactList";
 
 class ContactsPage extends Component {
   componentDidMount() {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { authOperations } from "../redux/auth";
-import styles from "../components/ContactsForm/ContactForm.module.css";
+import styles from "../Components/ContactsForm/ContactForm.module.css";
 
 class RegisterPage extends Component {
   state = {
